@@ -16,13 +16,13 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 
 ## 📸 Demonstração
 
-![Menu Principal](main/screenshoots/menu.PNG)
+![Menu Principal](screenshoots/menu.PNG)
 *Tela de seleção de modo de jogo*
 
-![Gameplay ACERTO](main/screenshoots/acerto_mg_fonetico.png)
+![Gameplay ACERTO](screenshoots/acerto_mg_fonetico.png)
 *Interface durante o jogo*
 
-![Gameplay ERRO](main/screenshoots/erro_mg_fonetico.png)
+![Gameplay ERRO](screenshoots/erro_mg_fonetico.png)
 *Interface durante o jogo*
 
 ---
