@@ -16,7 +16,7 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 
 ## 📸 Demonstração
 
-![Menu Principal](screenshots/menu.png)
+![Menu Principal](main/screenshoots/menu.PNG)
 *Tela de seleção de modo de jogo*
 
 ![Gameplay ACERTO](screenshots/acerto_mg_fonetico.png)
