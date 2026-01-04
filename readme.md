@@ -19,10 +19,10 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 ![Menu Principal](screenshoots/menu.PNG)
 *Tela de seleção de modo de jogo*
 
-![Gameplay ACERTO](screenshoots/acerto_mg_fonetico.png)
+![Gameplay ACERTO](screenshoots/acerto_mg_fonetico.PNG)
 *Interface durante o jogo*
 
-![Gameplay ERRO](screenshoots/erro_mg_fonetico.png)
+![Gameplay ERRO](screenshoots/erro_mg_fonetico.PNG)
 *Interface durante o jogo*
 
 ---
