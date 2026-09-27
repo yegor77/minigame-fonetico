@@ -1,10 +1,10 @@
 # 🎮 Jogo de Consciência Fonológica
 
-Como pai, percebi que meu filho precisava de apoio extra no desenvolvimento da consciência fonológica — especialmente na diferenciação entre D/T e M/N. Os cadernos tradicionais estavam deixando as atividades monótonas e cansativas.
+Como pai, percebi que meu filho precisava de apoio extra no desenvolvimento da consciência fonológica — especialmente na diferenciação entre pares de letras que costumam confundir na alfabetização (D/T, M/N, V/F, S/Z). Os cadernos tradicionais estavam deixando as atividades monótonas e cansativas.
 
 A solução? Gamificar o aprendizado! 🚀
 
-Transformei os exercicios repetitivos em um jogo python, aproveitando para aprender mais sobre, interativo onde cada acerto é comemorado pelo Messi feliz ⚽✨ e cada erro vem com aquele "Messi chorando" que é tão icônico. Resultado: muito mais engajamento, diversão e, claro, aprendizado de verdade.
+Transformei os exercícios repetitivos em um jogo Python, aproveitando para aprender mais sobre o assunto, interativo, onde cada acerto é comemorado pelo Messi feliz ⚽✨ e cada erro vem com aquele "Messi chorando" que é tão icônico. Resultado: muito mais engajamento, diversão e, claro, aprendizado de verdade.
 
 Este projeto nasceu da necessidade real de tornar a fonoaudiologia mais atrativa — automatizando o que antes era papel e caneta, e adicionando feedback visual que realmente motiva.
 
@@ -16,25 +16,26 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 
 ## 📸 Demonstração
 
-![Menu Principal](screenshoots/menu.PNG)
+![Menu Principal](screenshoots/menu2.PNG)
 *Tela de seleção de modo de jogo*
 
-![Gameplay ACERTO](screenshoots/acerto_mg_fonetico.PNG)
+![Gameplay ACERTO](screenshoots/acerto_mg_fonetico_2.PNG)
 *Interface durante o jogo*
 
-![Gameplay ERRO](screenshoots/erro_mg_fonetico.PNG)
+![Gameplay ERRO](screenshoots/erro_mg_fonetico_2.PNG)
 *Interface durante o jogo*
 
 ---
 
 ## 🎯 Funcionalidades
 
-- ✅ **Dois modos de jogo**: D×T e M×N
-- ✅ **100 palavras por modo** com posições variadas da letra alvo
+- ✅ **Quatro modos de jogo**: D×T, M×N, V×F e S×Z
+- ✅ **Quase 500 palavras** no total, distribuídas entre os 4 modos, com posições variadas da letra alvo
 - ✅ **Feedback visual animado** com GIFs do Messi (acerto/erro)
 - ✅ **Sistema de pontuação** em tempo real com percentual
 - ✅ **Interface escalável** (2x para melhor visualização)
-- ✅ **Validação de entrada** inteligente
+- ✅ **Menu em grade 2x2**, pensado para caber bem mesmo em telas menores
+- ✅ **Validação de entrada** inteligente (só aceita as letras válidas do modo escolhido)
 - ✅ **Testes unitários** integrados
 - ✅ **Logging detalhado** para debug
 
@@ -59,9 +60,11 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 ## 🎮 Como Usar
 
 1. **Inicie o jogo** executando `python main.py`
-2. **Selecione o modo**:
+2. **Selecione o modo**, no menu em grade 2x2:
    - **D × T**: Diferenciação entre D e T
    - **M × N**: Diferenciação entre M e N
+   - **V × F**: Diferenciação entre V e F
+   - **S × Z**: Diferenciação entre S e Z
 3. **Complete as palavras** digitando a letra que falta
 4. **Pressione Enter** ou clique em "Verificar"
 5. **Acompanhe sua evolução** no placar
@@ -78,25 +81,34 @@ Deixo aqui meus créditos a minha querida Esposa, professora, que sempre me apoi
 O projeto inclui testes unitários automáticos:
 **Cobertura de testes:**
 - ✅ Mascaramento de palavras
-- ✅ Validação de entrada
-- ✅ Verificação de respostas
-- ✅ Construção de desafios
+- ✅ Validação de entrada (para os 4 modos)
+- ✅ Verificação de respostas (para os 4 modos)
+- ✅ Construção de desafios (para os 4 modos)
+- ✅ Garantia de que nenhuma palavra do banco é descartada por índice/ocorrência inválidos
 
 ---
 
 ## 📊 Banco de Palavras
 
+Cada modo segue a mesma estrutura: palavras fáceis (letra no início), médias (letra no meio/fim) e difíceis (palavras mais longas), definidas como `(palavra, letra[, ocorrência])` e resolvidas automaticamente para o índice correto.
+
 ### Modo D×T
-- 50 palavras com **T**
-- 50 palavras com **D**
+- Palavras com **T** e com **D**
 - Posições variadas: início, meio, fim
 
 ### Modo M×N
-- 50 palavras com **M**
-- 50 palavras com **N**
+- Palavras com **M** e com **N**
 - Contextos diversos (vogais, consoantes)
 
-**Total: 200 palavras únicas**
+### Modo V×F
+- Palavras com **V** e com **F**
+- Posições variadas: início, meio, fim
+
+### Modo S×Z
+- Palavras com **S** e com **Z**
+- Posições variadas: início, meio, fim
+
+**Total: quase 500 palavras únicas entre os 4 modos**
 
 ---
 
@@ -107,6 +119,7 @@ O projeto inclui testes unitários automáticos:
 - **Feedback claro** (✅ verde / ❌ vermelho)
 - **Animações motivadoras** (GIFs do Messi)
 - **Interface minimalista** sem distrações
+- **Menu em grade**, para não estourar a altura da janela em telas menores
 
 ---
 
@@ -120,6 +133,10 @@ O projeto inclui testes unitários automáticos:
 ### Problema de escala DPI
 - O jogo tenta ajustar automaticamente
 - Em caso de falha, redimensione a janela manualmente
+
+### Botões do menu cortados / não aparecem
+- A janela é redimensionável; se ainda assim algum botão não aparecer, tente maximizar a janela
+- O menu usa uma grade 2x2 justamente para evitar isso em telas menores
 
 ---
 
